@@ -21,5 +21,10 @@ $ cargo run
       <td>Report Repair</td>  
       <td><b>**</b></td>  
     </tr>
+    <tr>
+      <td>Day 2</td>  
+      <td>Password Philosophy</td>  
+      <td><b>*</b></td>
+    </tr>
   </tbody>
 </table>
