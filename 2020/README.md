@@ -1,12 +1,12 @@
 # [Advent of code 2020](https://adventofcode.com)
 My solutions to advent of code 2020.
-
-I'm taking this opportuniyt to get familiar with rust. And will try ro solve as many puzzles a I find time to take on.
-
-To run solutions navigate to solution folder I.e. `advent_of_code/2020/report-repair` and start rust program with:
-```
-$ cargo run
-```
+I'm taking this opportuniyt to get familiar with rust.
+To run solutions:
+<ol>
+<li><a href="https://www.rust-lang.org/learn/get-started">[First you need to have rust installed]</a></li>
+<li>navigate to solution folder I.e. `advent_of_code/2020/report-repair`</li>
+<li>run in terminal:`$ cargo run`</li>
+</ol>
 
 ## PUZZLES
 <table>
