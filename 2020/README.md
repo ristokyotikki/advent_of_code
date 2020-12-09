@@ -36,5 +36,10 @@ $ cargo run
       <td>Passport Processing</td>  
       <td><b>**</b></td>
     </tr>
+    <tr>
+      <td>Day 5</td>  
+      <td>Binary Boarding</td>  
+      <td><b>**</b></td>
+    </tr>
   </tbody>
 </table>
