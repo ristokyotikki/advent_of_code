@@ -7,7 +7,7 @@ fn main() {
   task_one(1, 3);
   println!("\n------------------------------------");
   println!("Task 2: What do you get if you multiply together the number of trees encountered on each of the listed slopes?\n");
-  task_two();
+  println!("Answer is: {:?}", task_one(1, 1) * task_one(1, 3) * task_one(1, 5) * task_one(1, 7) * task_one(2, 1));
   println!("");
 }
 
@@ -47,8 +47,4 @@ fn task_one(down: usize, right: usize) -> usize {
 
   println!("Encountered {} trees.", trees);
   trees
-}
-
-fn task_two() {
-  println!("Answer is: {:?}", task_one(1, 1) * task_one(1, 3) * task_one(1, 5) * task_one(1, 7) * task_one(2, 1));
 }
