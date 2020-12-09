@@ -31,5 +31,10 @@ $ cargo run
       <td>Toboggan Trajectory</td>  
       <td><b>**</b></td>
     </tr>
+    <tr>
+      <td>Day 4</td>  
+      <td>Passport Processing</td>  
+      <td><b>**</b></td>
+    </tr>
   </tbody>
 </table>
