@@ -1,4 +1,3 @@
-use linecount::count_lines;
 use std::fs::File;
 use std::io::{prelude::*, BufReader};
 
@@ -13,10 +12,6 @@ fn main() {
 }
 
 fn task_one(down: usize, right: usize) -> usize {
-  let mut grid = Vec::new();
-  let file = File::open("inputs").expect("no such file");
-  let grid_heigth = count_lines(&file).unwrap();
-  let grid_width = right * grid_heigth;
   let file = File::open("inputs").expect("no such file");
   let buf = BufReader::new(file);
   let lines: Vec<String> = buf
@@ -24,31 +19,26 @@ fn task_one(down: usize, right: usize) -> usize {
     .map(|l| l.expect("Could not parse line"))
     .collect();
 
-  for line in lines.iter() {
-    let mut row = Vec::new();
-    let grid_repeat = (grid_width as f64 / line.len() as f64).ceil() as usize;
-    
-    for _n in 0..grid_repeat {
-      let mut input_row: Vec<char> = line.chars().collect();
-      row.append(&mut input_row);
-    }
-
-    grid.push(row);
-  }
 
   let mut trees = 0;
   let mut step = right;
   let mut row = down;
 
-  while row < grid_heigth {
-    if step < grid_width {
-      match grid[row][step] {
-        '#' => trees += 1,
-        '.' => {},
-        _ => println!("Unexpected encounter! {}", grid[row][step]),
-      }
-    } else {
-      println!("step out of bounds: {}. Grid width is: {}", step, grid_width);
+  for (index, line) in lines.iter().enumerate() {
+    if index < row {
+      continue;
+    }
+
+    let path: Vec<char> = line.chars().collect();
+    let mut x = step;
+    while x > line.len() - 1 {
+      x = x - line.len();
+    };
+
+    match path[x] {
+      '#' => trees += 1,
+      '.' => {},
+      _ => println!("Unexpected encounter! {}", path[step]),
     }
 
     step += right;
