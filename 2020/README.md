@@ -26,5 +26,10 @@ $ cargo run
       <td>Password Philosophy</td>  
       <td><b>**</b></td>
     </tr>
+    <tr>
+      <td>Day 3</td>  
+      <td>Toboggan Trajectory</td>  
+      <td><b>*</b></td>
+    </tr>
   </tbody>
 </table>
