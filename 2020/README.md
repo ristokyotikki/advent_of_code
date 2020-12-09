@@ -3,9 +3,8 @@ My solutions to advent of code 2020.
 I'm taking this opportuniyt to get familiar with rust.
 To run solutions:
 <ol>
-<li><a href="https://www.rust-lang.org/learn/get-started">[First you need to have rust installed]</a></li>
-<li>navigate to solution folder I.e. `advent_of_code/2020/report-repair`</li>
-<li>run in terminal:`$ cargo run`</li>
+<li>Navigate to solution folder I.e. <b>advent_of_code/2020/report-repair</b></li>
+<li>Run in terminal: <code>cargo run</code></li>
 </ol>
 
 ## PUZZLES
