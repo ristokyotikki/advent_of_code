@@ -1,8 +1,4 @@
 # [Advent of code 2020](https://adventofcode.com)
-My solutions to advent of code 2020.
-I'm taking this opportuniyt to get familiar with rust.
-
-## PUZZLES
 <table>
   <tr style="font-weight: bold;">
     <td>Day</td>

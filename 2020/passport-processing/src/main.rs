@@ -66,27 +66,16 @@ impl Passport {
   }
 
   fn validate_ecl(&mut self, ecl: String) {
-    if "amb" == ecl {
-      self.ecl = true;
-    }
-    if "blu" == ecl {
-      self.ecl = true;
-    }
-    if "brn" == ecl {
-      self.ecl = true;
-    }
-    if "gry" == ecl {
-      self.ecl = true;
-    }
-    if "grn" == ecl {
-      self.ecl = true;
-    }
-    if "hzl" == ecl {
-      self.ecl = true;
-    }
-    if "oth" == ecl {
-      self.ecl = true;
-    }
+    self.ecl = [
+      "amb".to_string(),
+      "blu".to_string(),
+      "brn".to_string(),
+      "gry".to_string(),
+      "grn".to_string(),
+      "hzl".to_string(),
+      "oth".to_string(),
+    ]
+    .contains(&ecl);
   }
 
   fn validate_pid(&mut self, pid: String) {
@@ -127,14 +116,6 @@ fn task_one() {
     .collect();
 
   for (i, line) in lines.iter().enumerate() {
-    if line.len() == 0 {
-      if passport.valid() {
-        valid_passports += 1;
-      }
-      passport.clear();
-      continue;
-    }
-
     let fields = line.split_whitespace();
 
     for field in fields {
@@ -151,8 +132,12 @@ fn task_one() {
       }
     }
 
-    if i == lines.len() - 1 && passport.valid() {
-      valid_passports += 1;
+    if line.len() == 0 || i == lines.len() - 1 {
+      if passport.valid() {
+        valid_passports += 1;
+      }
+      passport.clear();
+      continue;
     }
   }
 
@@ -179,14 +164,6 @@ fn task_two() {
     .collect();
 
   for (i, line) in lines.iter().enumerate() {
-    if line.len() == 0 {
-      if passport.valid() {
-        valid_passports += 1;
-      }
-      passport.clear();
-      continue;
-    }
-
     let fields = line.split_whitespace();
 
     for field in fields {
@@ -203,8 +180,12 @@ fn task_two() {
       }
     }
 
-    if i == lines.len() - 1 && passport.valid() {
-      valid_passports += 1;
+    if line.len() == 0 || i == lines.len() - 1 {
+      if passport.valid() {
+        valid_passports += 1;
+      }
+      passport.clear();
+      continue;
     }
   }
 
