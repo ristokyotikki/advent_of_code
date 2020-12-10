@@ -31,5 +31,10 @@
       <td>Binary Boarding</td>  
       <td><b>**</b></td>
     </tr>
+    <tr>
+      <td>Day 6</td>  
+      <td>Custom Customs</td>  
+      <td><b>**</b></td>
+    </tr>
   </tbody>
 </table>
