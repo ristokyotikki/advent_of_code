@@ -9,7 +9,7 @@
     <tr>
       <td>Day 1</td>  
       <td>Sonar Sweep</td>  
-      <td><b>*</b></td>  
+      <td><b>**</b></td>  
     </tr>
   </tbody>
 </table>
