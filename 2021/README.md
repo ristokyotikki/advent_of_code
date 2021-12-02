@@ -11,5 +11,10 @@
       <td>Sonar Sweep</td>  
       <td><b>**</b></td>  
     </tr>
+    <tr>
+      <td>Day 2</td>  
+      <td>Dive!</td>  
+      <td><b>*</b></td>  
+    </tr>
   </tbody>
 </table>

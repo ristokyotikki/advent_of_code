@@ -1,21 +1,24 @@
 mod utils;
+mod solutions;
 
+use solutions::*;
 use utils::read_lines_from_file;
 use::std::fs;
 use std::io;
 
-#[path = "solutions/01_sonar_sweep.rs"] mod sonar_sweep;
-
 static SOLUTIONS_PATH: &str ="./src/solutions";
 
 fn main() {
-    let paths_count = fs::read_dir(SOLUTIONS_PATH).unwrap().count();
+    let paths_count = fs::read_dir(SOLUTIONS_PATH).unwrap().count() - 1;
     let paths = fs::read_dir(SOLUTIONS_PATH).unwrap();
     
     println!("\n\n");
     println!("Which solution would you like to run?");
     for (i, path) in paths.enumerate() {
-        println!("    {}: {:?}", i + 1, path.unwrap().file_name())
+        let file_name = path.unwrap().file_name();
+        if file_name != "mod.rs" {
+            println!("    {}: {:?}", i + 1, file_name)
+        }
     }
 
     let mut input = 999;
@@ -25,7 +28,8 @@ fn main() {
     }
 
     match input {
-        1 => sonar_sweep::run(read_lines_from_file("src/inputs/sonar_sweep_1")),
+        1 => sonar_sweep::run(read_lines_from_file("src/inputs/sonar_sweep")),
+        2 => dive::run(read_lines_from_file("src/inputs/dive")),
         _ => panic!("input {}, not mapped to a solution", input)
     }
     
