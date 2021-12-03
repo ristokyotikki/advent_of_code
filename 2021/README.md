@@ -16,5 +16,10 @@
       <td>Dive!</td>  
       <td><b>**</b></td>  
     </tr>
+    <tr>
+      <td>Day 3</td>  
+      <td>Binary Diagnostic</td>  
+      <td><b>*</b></td>  
+    </tr>
   </tbody>
 </table>

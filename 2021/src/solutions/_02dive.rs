@@ -1,16 +1,19 @@
-pub fn run(files: Vec<String>) {
+use crate::solutions::utils::*;
+
+pub fn run() {
+  let lines = read_lines_from_file("src/inputs/dive");
   println!("\nExcuting Day 2 Dive! - excercise 1");
-  excercise_one(&files);
+  excercise_one(&lines);
 
   println!("\nExcuting Day 2 Dive! - excercise 2");
-  excercise_two(&files);
+  excercise_two(&lines);
 }
 
-fn excercise_one(files: &Vec<String>) {
+fn excercise_one(lines: &Vec<String>) {
   let mut depth: i32 = 0;
   let mut position: i32 = 0;
 
-  for file in files {
+  for file in lines {
     let instruction: Vec<&str> = file.split_whitespace().collect();
 
     match instruction[0] {
@@ -26,12 +29,12 @@ fn excercise_one(files: &Vec<String>) {
   println!("total is: {}", depth * position);
 }
 
-fn excercise_two(files: &Vec<String>) {
+fn excercise_two(lines: &Vec<String>) {
   let mut depth: i32 = 0;
   let mut position: i32 = 0;
   let mut aim: i32 = 0;
 
-  for file in files {
+  for file in lines {
     let instruction: Vec<&str> = file.split_whitespace().collect();
 
     match instruction[0] {

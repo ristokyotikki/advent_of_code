@@ -1,16 +1,19 @@
-pub fn run(files: Vec<String>) {
+use crate::solutions::utils::*;
+
+pub fn run() {
+  let lines = read_lines_from_file("src/inputs/sonar_sweep");
   println!("\nExcuting Day 1 Sonar Sweep - excercise 1");
-  excercise_one(&files);
+  excercise_one(&lines);
 
   println!("\nExcuting Day 1 Sonar Sweep - excercise 2");
-  excercise_two(&files);
+  excercise_two(&lines);
 }
 
-fn excercise_one(files: &Vec<String>) {
+fn excercise_one(lines: &Vec<String>) {
   let mut prev = String::new();
   let mut count = 0;
 
-  for curr in files {
+  for curr in lines {
     let curr_usize = curr.parse::<usize>().unwrap();
     match curr_usize {
       _ if prev.is_empty() => (),
