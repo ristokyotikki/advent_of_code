@@ -29,16 +29,19 @@ fn excercise_one() {
       .into_iter()
       .collect();
 
-    let more_ones = ones > bits.len() / 2;
-    if more_ones {
-      gamma += "1";
-      epsilon += "0"
-    } else {
-      gamma += "0";
-      epsilon += "1"
+    match ones > bits.len() / 2 {
+      true => {
+        gamma += "1";
+        epsilon += "0"
+      },
+      false => {
+        gamma += "0";
+        epsilon += "1"
+      }
     }
   }
 
-  let result: isize = isize::from_str_radix(&gamma, 2).unwrap() * isize::from_str_radix(&epsilon, 2).unwrap();
-  println!("Power consumption is: {}", result);
+  let gamma_int = isize::from_str_radix(&gamma, 2).unwrap();
+  let epsilon_int = isize::from_str_radix(&epsilon, 2).unwrap();
+  println!("Power consumption is: {}", gamma_int * epsilon_int);
 }
