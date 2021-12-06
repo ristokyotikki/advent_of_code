@@ -24,7 +24,7 @@
     <tr>
       <td>Day 4</td>  
       <td>Giant Squid</td>  
-      <td><b>*</b></td>  
+      <td><b>**</b></td>  
     </tr>
   </tbody>
 </table>
