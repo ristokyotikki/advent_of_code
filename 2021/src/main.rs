@@ -34,6 +34,7 @@ fn main() {
         1 => _01sonar_sweep::run(),
         2 => _02dive::run(),
         3 => _03binary_diagnostics::run(),
+        4 => _04giant_squid::run(),
         _ => panic!("input {}, not mapped to a solution", input)
     }
     

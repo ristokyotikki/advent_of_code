@@ -19,7 +19,12 @@
     <tr>
       <td>Day 3</td>  
       <td>Binary Diagnostic</td>  
-      <td><b>*</b></td>  
+      <td><b>**</b></td>  
+    </tr>
+    <tr>
+      <td>Day 4</td>  
+      <td>Giant Squid</td>  
+      <td><b></b></td>  
     </tr>
   </tbody>
 </table>
