@@ -26,5 +26,10 @@
       <td>Giant Squid</td>  
       <td><b>**</b></td>  
     </tr>
+    <tr>
+      <td>Day 5</td>  
+      <td>Hydrothermal Venture</td>  
+      <td><b></b></td>  
+    </tr>
   </tbody>
 </table>

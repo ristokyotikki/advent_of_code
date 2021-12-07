@@ -9,7 +9,8 @@ fn main() {
         1: Sonar Sweep
         2: Dive!
         3: Binary Diagnostics
-        4: Giant Squid"
+        4: Giant Squid
+        5: Hydrothermal Venture"
     );
     let input = prompt_int_input(prompt);
 
@@ -18,7 +19,7 @@ fn main() {
         2 => _02dive::run(),
         3 => _03binary_diagnostics::run(),
         4 => _04giant_squid::run(),
-        // 5 => _04giant_squid::run(),
+        5 => _05hydrothermal_venture::run(),
         _ => panic!("Day {} not solved yet unfortunately", input),
     }
 }
